@@ -12,3 +12,5 @@ https://kangaru94.itch.io/the-great-fixening?secret=DOGquNPx8DtBNh3eZR1z70eo0w
 
 Working game:
 https://kangaru94.itch.io/the-fixing-of-the-great-fixening?secret=0kroOEFK9VEQmnnuRkcuuyjzEhg
+
+I've been learning C# for a week now and I'm thrilled with my progress so far. I'm excited for my future with game development and programming in general. To disclose: I've used python and C++ in the past, so I didn't jump into C# with zero knowledge. Actually, my knowledge of python translated very well in my learning of C# so far. If you're, for some reason, reading this and think "aw gee, this is a week's worth of learning?!", it's not. 
