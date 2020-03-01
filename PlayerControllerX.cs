@@ -6,8 +6,9 @@ public class PlayerControllerX : MonoBehaviour
 {
     private float speed = 15f;
     private float fastSpeed;
-    private float rotationSpeed;
+    private float rotationSpeed = 100f;
     private float verticalInput;
+    private float horizontalInput;
 
     void Start()
     {
@@ -16,27 +17,29 @@ public class PlayerControllerX : MonoBehaviour
 
     void FixedUpdate()
     {
-       //fastSpeed is the throttle
-       //rotateSpeed controls rate of plane's turn
+       // FastSpeed is the throttle
         fastSpeed = speed + 20f;
-        rotationSpeed = 100f;
 
-        // get the user's vertical input
+        // The horizontal input is moreso just to see if I could. I didn't ask "should I", I asked "can I" and yes, I can
+        // Get the user's vertical and horizontal input
         verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal");
 
-        //if statement controls throttle based on space bar
+
+        // If statement controls throttle based on space bar
         if (Input.GetKey(KeyCode.Space))
         {
             transform.Translate(Vector3.forward * Time.deltaTime * fastSpeed);
         }
 
-        //this is the default speed of forward motion
+        // This is the default speed of forward motion
         else 
         {
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
         }
 
-        //rotates the plane 
+        // Rotates the plane 
         transform.Rotate(Vector3.right * Time.deltaTime * rotationSpeed * verticalInput);
+        transform.Rotate(Vector3.up * Time.deltaTime * rotationSpeed * horizontalInput);
     }
 }
